@@ -115,7 +115,7 @@ Normalize our dataset.
 
 8. Finally, call the functions confusion_matrix(), and the classification_report() in order to evaluate the performance of our classifier.
 
-<H3>Program:</H3> 
+## Program:
 ```py
 import pandas as pd
 import sklearn
@@ -124,7 +124,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import classification_report, confusion_matrix
-
 url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
 names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'Class']
 irisdata = pd.read_csv(url, names=names)
@@ -133,7 +132,6 @@ y = irisdata.select_dtypes(include=[object])
 X.head()
 y.head()
 y.Class.unique()
-
 le = preprocessing.LabelEncoder()
 y = y.apply(le.fit_transform)
 y.head()
@@ -187,10 +185,6 @@ print(classification_report(testing_b,predicted_values))
 ![111](https://github.com/Rajeshanbu/Ex-4-NN/assets/118924713/91d1138f-0bdc-48a9-babc-413184a7f087)
 
 ![11111](https://github.com/Rajeshanbu/Ex-4-NN/assets/118924713/1ccb1750-f626-4505-a222-45b2264904aa)
-
-![11111111111111](https://github.com/Rajeshanbu/Ex-4-NN/assets/118924713/feebdf60-b8f7-4ccc-93f4-0a1f63733247)
-
-
 
 <H3>Result:</H3>
 Thus, MLP is implemented for multi-classification using python.
